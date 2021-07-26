@@ -1,0 +1,15 @@
+C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.AssemblyReference.cache
+C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\Infrastructure\obj\Debug\net5.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\Infrastructure\obj\Debug\net5.0\Infrastructure.AssemblyInfoInputs.cache
+C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\Infrastructure\obj\Debug\net5.0\Infrastructure.AssemblyInfo.cs
+C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.CoreCompileInputs.cache
+C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\Infrastructure\bin\Debug\net5.0\Infrastructure.deps.json
+C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\Infrastructure\bin\Debug\net5.0\Infrastructure.dll
+C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\Infrastructure\bin\Debug\net5.0\ref\Infrastructure.dll
+C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\Infrastructure\bin\Debug\net5.0\Infrastructure.pdb
+C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\Infrastructure\bin\Debug\net5.0\ApplicationCore.dll
+C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\Infrastructure\bin\Debug\net5.0\ApplicationCore.pdb
+C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.CopyComplete
+C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\Infrastructure\obj\Debug\net5.0\Infrastructure.dll
+C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\Infrastructure\obj\Debug\net5.0\ref\Infrastructure.dll
+C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\Infrastructure\obj\Debug\net5.0\Infrastructure.pdb
