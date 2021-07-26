@@ -8,6 +8,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace GuohuaZhang.App.TaskManagementSystemMVC
 {
@@ -24,6 +26,10 @@ namespace GuohuaZhang.App.TaskManagementSystemMVC
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddDbContext<TaskDbContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("TaskDbConnecion"));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

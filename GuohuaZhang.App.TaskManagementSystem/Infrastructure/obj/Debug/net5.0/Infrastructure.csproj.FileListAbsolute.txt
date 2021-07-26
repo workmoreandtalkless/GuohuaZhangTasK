@@ -13,3 +13,6 @@ C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\Infrastructu
 C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\Infrastructure\obj\Debug\net5.0\Infrastructure.dll
 C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\Infrastructure\obj\Debug\net5.0\ref\Infrastructure.dll
 C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\Infrastructure\obj\Debug\net5.0\Infrastructure.pdb
+C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\Infrastructure\bin\Debug\net5.0\Infrastructure.runtimeconfig.json
+C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\Infrastructure\bin\Debug\net5.0\Infrastructure.runtimeconfig.dev.json
+C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\Infrastructure\obj\Debug\net5.0\Infrastructure.genruntimeconfig.cache
