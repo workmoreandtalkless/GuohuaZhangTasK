@@ -73,6 +73,7 @@ namespace GuohuaZhang.App.TaskManagementSystemMVC.Controllers
             };
 
             // identity object
+            // HttpContext : 
 
             var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
 

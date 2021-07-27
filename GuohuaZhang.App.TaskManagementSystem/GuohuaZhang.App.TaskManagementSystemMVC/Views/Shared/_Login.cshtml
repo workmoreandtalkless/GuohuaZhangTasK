@@ -1,0 +1,44 @@
+﻿@*@using ApplicationCore.ServiceInterface
+@inject ICurrentUser _currentUser*@
+
+@if (User.Identity.IsAuthenticated)
+{
+    <!--<div class="navbar-collapse collapse">
+        <ul class="navbar-nav ml-auto">-->
+            @*use info in cookie / claims*@
+            <!--<li>
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-user fa-2x"></i>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" asp-action="ViewUserProfile" asp-controller="User">
+                        <div class="justify-content-center">
+                            Signed in as<br>
+                            <strong>_currentUser.FullName</strong><br>
+                            <span class="text-muted">_currentUser.Email</span><br>
+                        </div>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item">Edit Profile</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" asp-action="PurchasedMovies" asp-controller="User" asp-route-id="_currentUser.UserId">My Tasks History</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" asp-action="Logout" asp-controller="Account">Logout</a>
+                </div>
+            </li>
+        </ul>
+    </div>-->
+}
+else
+{
+    <div class="navbar-collapse collapse">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-itm pr-4">
+                <a class="btn btn-primary" asp-controller="Account" asp-action="Login">Login</a>
+            </li>
+            <li class="nav-itm pr-4">
+                <a class="btn btn-primary" asp-controller="Account" asp-action="Register">Register</a>
+            </li>
+        </ul>
+    </div>
+}
