@@ -1,19 +1,18 @@
 ﻿using ApplicationCore.Entities;
-using ApplicationCore.Entities;
-
 using ApplicationCore.RepositoryInterfaces;
-using Infrastructure.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repositories
 {
-    public class TasksRepository : EfRepository<Tasks>, ITasksRepository
+    public class TasksHistoryRepository : EfRepository<TasksHistory>, ITasksHistoryRepository
     {
-        public TasksRepository(TaskDbContext dbContext) : base(dbContext)
+        public TasksHistoryRepository(TaskDbContext dbContext) : base(dbContext)
         {
 
         }

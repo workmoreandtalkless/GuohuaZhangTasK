@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ApplicationCore.ServiceInterfaces
+namespace ApplicationCore.RepositoryInterfaces
 {
-    interface ITasksRepository
+    public interface ITasksHistoryRepository
     {
     }
 }

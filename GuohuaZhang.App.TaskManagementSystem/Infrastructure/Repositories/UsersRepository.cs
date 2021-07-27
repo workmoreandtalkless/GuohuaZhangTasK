@@ -1,6 +1,4 @@
 ﻿using ApplicationCore.Entities;
-using ApplicationCore.Entities;
-
 using ApplicationCore.RepositoryInterfaces;
 using Infrastructure.Data;
 using System;
@@ -11,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Repositories
 {
-    public class TasksRepository : EfRepository<Tasks>, ITasksRepository
+    public class UsersRepository : EfRepository<Users>, IUsersRepository
     {
-        public TasksRepository(TaskDbContext dbContext) : base(dbContext)
+        public UsersRepository(TaskDbContext dbContext) : base(dbContext)
         {
 
         }

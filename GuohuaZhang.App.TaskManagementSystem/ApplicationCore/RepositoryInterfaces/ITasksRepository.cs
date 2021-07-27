@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ApplicationCore.RepositoryInterfaces
 {
-   public interface ITasksRepository 
+   public interface ITasksRepository :IAsyncRepository<Tasks>
     {
     }
 }

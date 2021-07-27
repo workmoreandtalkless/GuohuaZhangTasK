@@ -43,7 +43,7 @@ namespace Infrastructure.Data
 
             builder.ToTable("Tasks");
             builder.HasKey(m => m.Id);
-
+            builder.HasOne(m => m.Users).WithMany(m => m.Tasks).HasForeignKey(m => m.userid);
             builder.Property(m => m.Title).HasMaxLength(50);
             builder.Property(m => m.Priority).HasMaxLength(1);
             builder.Property(m => m.Remarks).HasMaxLength(500);
@@ -56,6 +56,7 @@ namespace Infrastructure.Data
 
             builder.ToTable("TasksHistory");
             builder.HasKey(m => m.TaskId);
+            builder.HasOne(m => m.Users).WithMany(m => m.TasksHistories).HasForeignKey(m => m.UserId);
             builder.Property(m => m.UserId);
             builder.Property(m => m.Title).HasMaxLength(50);
             builder.Property(m => m.Description).HasMaxLength(500);

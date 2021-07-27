@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Services
 {
-    public class TasksService : ITasksService
+    public class TasksHistoryService : ITasksHistoryService
     {
     }
 }
