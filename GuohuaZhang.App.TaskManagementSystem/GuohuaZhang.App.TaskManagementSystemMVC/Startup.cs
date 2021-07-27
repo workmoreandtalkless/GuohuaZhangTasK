@@ -42,6 +42,9 @@ namespace GuohuaZhang.App.TaskManagementSystemMVC
             services.AddScoped<ITasksService, TasksService>();
             services.AddScoped<IUsersRepository, UsersRepository>();
             services.AddScoped<IUsersService, UsersService>();
+            services.AddScoped<ICurrentUser, CurrentUser>();
+
+            services.AddHttpContextAccessor();
 
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(options => {
