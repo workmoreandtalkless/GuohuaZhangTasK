@@ -9,5 +9,6 @@ namespace ApplicationCore.RepositoryInterfaces
 {
     public interface ITasksHistoryRepository : IAsyncRepository<TasksHistory>
     {
+        public Task<List<TasksHistory>> GetRecent30Task();
     }
 }

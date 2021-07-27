@@ -1,4 +1,5 @@
-﻿using ApplicationCore.Models;
+﻿using ApplicationCore.Entities;
+using ApplicationCore.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,9 @@ namespace ApplicationCore.ServiceInterfaces
     public interface IUsersService
     {
         Task<UserRegisterResponseModel> RegisterUser(UserRegisterRequestModel requestModel);
-        Task<UserLoginResponseModel> Login(string email, string password); 
+        Task<UserLoginResponseModel> Login(string email, string password);
+        Task<UserRegisterResponseModel> GetUserById(int id);
+        Task<UserRegisterResponseModel> GetUser(string email);
+        Task<List<UserRegisterResponseModel>> GetUser();
     }
 }

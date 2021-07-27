@@ -9,5 +9,9 @@ namespace ApplicationCore.RepositoryInterfaces
 {
    public interface ITasksRepository :IAsyncRepository<Tasks>
     {
+        Task<List<Tasks>> GetTasks();
+        Task<List<Tasks>> GetTasksByuserid(int uid);
+        Task<bool> CheckTaskForUser(int uid, string Title);
+        Task<Tasks> GetTaskByUserIdandTitle(int uid, string title);
     }
 }

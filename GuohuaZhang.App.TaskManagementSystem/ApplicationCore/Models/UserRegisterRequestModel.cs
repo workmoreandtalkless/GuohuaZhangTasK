@@ -17,7 +17,8 @@ namespace ApplicationCore.Models
         [Required]
         [StringLength(10, ErrorMessage = "The passowrd should be minimum of 8 characters", MinimumLength = 8)]
         [RegularExpression("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[#$^+=!*()@%&]).{8,}$",
-    ErrorMessage = "Password should have minimun og 8 characters and should include one upper, lower, number and a special char")]
+    ErrorMessage = "Password should have minimun og 8 characters and should include one upper, lower, number and a special char " +
+            "and maximum 10 characters")]
         public string Password { get; set; }
 
         [Required]

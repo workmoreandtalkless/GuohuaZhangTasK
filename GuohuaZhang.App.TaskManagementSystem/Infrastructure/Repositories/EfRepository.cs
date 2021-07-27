@@ -32,7 +32,8 @@ namespace Infrastructure.Repositories
 
         public async Task<T> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            var entity = await _dbContext.Set<T>().FindAsync(id);
+            return entity;
         }
 
         public async Task<int> GetCountAsync(Expression<Func<T, bool>> filter = null)
@@ -47,7 +48,7 @@ namespace Infrastructure.Repositories
 
         public async Task<IEnumerable<T>> ListAllAsync()
         {
-            throw new NotImplementedException();
+            return await _dbContext.Set<T>().ToListAsync();
         }
 
         public async Task<IEnumerable<T>> ListAsync(Expression<Func<T, bool>> filter)

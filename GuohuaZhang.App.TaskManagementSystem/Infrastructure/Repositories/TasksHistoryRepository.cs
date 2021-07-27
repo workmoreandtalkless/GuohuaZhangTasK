@@ -16,5 +16,11 @@ namespace Infrastructure.Repositories
         {
 
         }
+
+        public async Task<List<TasksHistory>> GetRecent30Task()
+        {
+            var recentTasks = await _dbContext.TasksHistories.OrderByDescending(m => m.Completed).Take(30).ToListAsync();
+            return recentTasks;
+        }
     }
 }

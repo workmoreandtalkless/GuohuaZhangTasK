@@ -11,17 +11,68 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Cryptography;
 using System.Security.Cryptography;
 using Microsoft.AspNetCore.Cryptography.KeyDerivation;
+/*using AutoMapper;*/
 
 namespace Infrastructure.Services
 {
     public class UsersService : IUsersService
     {
         private readonly IUsersRepository _usersRepository;
-
+       
         public UsersService(IUsersRepository usersRepository)
         {
             _usersRepository = usersRepository;
         }
+
+        public async Task<UserRegisterResponseModel> GetUser(string email)
+        {
+           var user = await _usersRepository.GetUserByEmail(email);
+            if (user == null) throw new NotFoundException("there is no such user account");
+            var response = new UserRegisterResponseModel
+            {
+                Id = user.Id,
+                Email = user.Email,
+                Fullname = user.Fullname,
+                Mobileno = user.Mobileno
+            };
+
+            return response;
+        }
+
+        public async Task<List<UserRegisterResponseModel>> GetUser()
+        {
+            var users = await _usersRepository.ListAllAsync();
+
+            var usermodels = new List<UserRegisterResponseModel>();
+            foreach(var user in users)
+            {
+                usermodels.Add(new UserRegisterResponseModel
+                {
+                    Id = user.Id,
+                    Email = user.Email,
+                    Fullname = user.Fullname,
+                    Mobileno = user.Mobileno
+                });
+            }
+            return usermodels;
+        }
+
+        public async Task<UserRegisterResponseModel> GetUserById(int id)
+        {
+            var user = await _usersRepository.GetByIdAsync(id);
+            if (user == null) throw new NotFoundException("User", id);
+            var response =new UserRegisterResponseModel
+            {
+                Id = user.Id,
+                Email = user.Email,
+                Fullname = user.Fullname,
+                Mobileno = user.Mobileno
+            };
+
+            return response;
+
+        }
+
         public async Task<UserLoginResponseModel> Login(string email, string password)
         {
             var dbUser = await _usersRepository.GetUserByEmail(email);
