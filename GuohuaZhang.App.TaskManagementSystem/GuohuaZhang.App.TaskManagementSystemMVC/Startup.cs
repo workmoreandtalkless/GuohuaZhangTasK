@@ -10,6 +10,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+using ApplicationCore.RepositoryInterfaces;
+using Infrastructure.Repositories;
+using Infrastructure.Services;
+using ApplicationCore.ServiceInterfaces;
 
 namespace GuohuaZhang.App.TaskManagementSystemMVC
 {
@@ -30,6 +34,13 @@ namespace GuohuaZhang.App.TaskManagementSystemMVC
             {
                 options.UseSqlServer(Configuration.GetConnectionString("TaskDbConnecion"));
             });
+
+            services.AddScoped<ITasksHistoryRepository, TasksHistoryRepository>();
+            services.AddScoped<ITasksHistoryService, TasksHistoryService>();
+            services.AddScoped<ITasksRepository, TasksRepository>();
+            services.AddScoped<ITasksService, TasksService>();
+            services.AddScoped<IUsersRepository, UsersRepository>();
+            services.AddScoped<IUsersService, UsersService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
