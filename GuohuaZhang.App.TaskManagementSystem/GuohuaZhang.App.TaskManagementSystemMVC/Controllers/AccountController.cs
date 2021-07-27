@@ -1,9 +1,12 @@
 ﻿using ApplicationCore.Models;
 using ApplicationCore.ServiceInterfaces;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace GuohuaZhang.App.TaskManagementSystemMVC.Controllers
@@ -36,7 +39,6 @@ namespace GuohuaZhang.App.TaskManagementSystemMVC.Controllers
             //Model Binding not case senstive
             return RedirectToAction("Login");
 
-            return View();
         }
 
         [HttpGet]
@@ -53,7 +55,7 @@ namespace GuohuaZhang.App.TaskManagementSystemMVC.Controllers
                 return View();
             }
 
-            var user = await _userService.Login(model.Email, model.Password);
+            var user = await _usersService.Login(model.Email, model.Password);
 
             if (user == null)
             {
@@ -65,8 +67,8 @@ namespace GuohuaZhang.App.TaskManagementSystemMVC.Controllers
             var claims = new List<Claim>
             {
                  new Claim(ClaimTypes.Email, user.Email),
-                 new Claim(ClaimTypes.GivenName, user.FirstName),
-                 new Claim(ClaimTypes.Surname, user.LastName),
+                 new Claim(ClaimTypes.Name, user.FullName),
+                 new Claim(ClaimTypes.MobilePhone, user.Mobileno),
                  new Claim(ClaimTypes.NameIdentifier, user.Id.ToString())
             };
 
@@ -79,28 +81,15 @@ namespace GuohuaZhang.App.TaskManagementSystemMVC.Controllers
 
             return LocalRedirect("~/");
 
-            // HttpContext
-            // URL, Http method type, form body, browser, Ip address, 
-
-            // correct pasword
-            // display, FirstName, LastName, Email
-            // Button/Link Logout
-            // Cookie Based Authentication....
-
-            // 10:00 AM you login website success
-            // created a MovieShopAuthCookie => 2 hours
-            // Claims, firstname, lastname, id, email - encrypt this info and store in cookie
-            // Every time you make a send a request from browser to server => Cookies are sent to server automatiaclly
-
-            // make sure user is login successfully
-            // movies/details/22 => Buy Button
-            // when u click on BUY Button => POST
-            // Purchase table => movieid, userid
-            // user/buymovie => should take userid from cookie and send to Database
-            // 10:15 AM you wanna buy a movie 
-            // 10:30 AM you wanna fav a movie
+ 
 
             return View();
+        }
+
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync();
+            return RedirectToAction("Login");
         }
 
     }

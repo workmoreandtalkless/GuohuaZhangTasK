@@ -14,6 +14,7 @@ using ApplicationCore.RepositoryInterfaces;
 using Infrastructure.Repositories;
 using Infrastructure.Services;
 using ApplicationCore.ServiceInterfaces;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace GuohuaZhang.App.TaskManagementSystemMVC
 {
@@ -41,6 +42,14 @@ namespace GuohuaZhang.App.TaskManagementSystemMVC
             services.AddScoped<ITasksService, TasksService>();
             services.AddScoped<IUsersRepository, UsersRepository>();
             services.AddScoped<IUsersService, UsersService>();
+
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(options => {
+                    options.Cookie.Name = "TaskAuth";
+                    options.ExpireTimeSpan = TimeSpan.FromHours(2);
+                    options.LoginPath = "/Account/Login";
+
+                });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -60,7 +69,7 @@ namespace GuohuaZhang.App.TaskManagementSystemMVC
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
