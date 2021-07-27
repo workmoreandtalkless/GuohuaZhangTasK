@@ -24,17 +24,17 @@ namespace GuohuaZhang.App.TaskManagementSystemMVC.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(UserRegisterRequestModel model)
         {
-            /* //save the data only when Model validation passes
-             if (!ModelState.IsValid)
-             {
-                 //save to DB
-                 return View();
-             }
-             var createUser = await _userService.RegisterUser(model);
-             //redirect to login page
+            //save the data only when Model validation passes
+            if (!ModelState.IsValid)
+            {
+                //save to DB
+                return View();
+            }
+            var createUser = await _userService.RegisterUser(model);
+            //redirect to login page
 
-             //Model Binding not case senstive
-             return RedirectToAction("Login");*/
+            //Model Binding not case senstive
+            return RedirectToAction("Login");
 
             return View();
         }

@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "3QWcA/4uPAa1EKuJQzStcm+G3Secszizv9SAT/+punUi6d9Q75M6lihlyPEJ480dH2+n2Q3RK+CMm3+2GC3tSw==",
+  "dgSpecHash": "5xtgXCQg9k11Y7pGFqe4r88gep7SQfi/ekTW9okg+lY/SR+4Mk4ZxlXNlRZPj6VFnSXGrY0jjJaw3RvPg7BnhQ==",
   "success": true,
   "projectFilePath": "C:\\Alvin\\Antra\\GuohuaZhangTasK\\GuohuaZhang.App.TaskManagementSystem\\GuohuaZhang.App.TaskManagementSystemMVC\\GuohuaZhang.App.TaskManagementSystemMVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\guohu\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\guohu\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.8\\microsoft.aspnetcore.cryptography.internal.5.0.8.nupkg.sha512",
+    "C:\\Users\\guohu\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.8\\microsoft.aspnetcore.cryptography.keyderivation.5.0.8.nupkg.sha512",
     "C:\\Users\\guohu\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\guohu\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "C:\\Users\\guohu\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.0.1\\microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",

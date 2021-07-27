@@ -15,6 +15,8 @@ namespace ApplicationCore.Entities
         public string Password { get; set; }
         public string Fullname { get; set; }
         public string Mobileno { get; set; }
+        public string HashedPassword { get; set; }
+        public string Salt { get; set; }
 
         public ICollection<Tasks> Tasks { get; set; }
         public ICollection<TasksHistory> TasksHistories { get; set; }
