@@ -31,7 +31,9 @@ namespace Infrastructure.Data
             builder.ToTable("Users");
             builder.HasKey(m => m.Id);
             builder.Property(m => m.Email).HasMaxLength(50);
-            builder.Property(m => m.Password).HasMaxLength(10).IsRequired();
+            builder.Property(u => u.HashedPassword).HasMaxLength(1024).IsRequired();
+            builder.Property(u => u.Salt).HasMaxLength(1024);
+  
             builder.Property(m => m.Fullname).HasMaxLength(50);
             builder.Property(m => m.Mobileno).HasMaxLength(50);
 

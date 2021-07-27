@@ -22,9 +22,28 @@ namespace Infrastructure.Services
         {
             _usersRepository = usersRepository;
         }
-        public Task<UserLoginResponseModel> Login(string email, string password)
+        public async Task<UserLoginResponseModel> Login(string email, string password)
         {
-            throw new NotImplementedException();
+            var dbUser = await _usersRepository.GetUserByEmail(email);
+            if (dbUser == null)
+            {
+                throw new NotFoundException("Email does not exists, Please register first");
+            }
+            var hashedPassword = HashPassword(password, dbUser.Salt);
+            if (hashedPassword == dbUser.HashedPassword)
+            {
+                //correct password
+                var userLoginResponse = new UserLoginResponseModel
+                {
+                    Id = dbUser.Id,
+                    Email = dbUser.Email,
+                    FullName = dbUser.Fullname,
+                    Mobileno = dbUser.Mobileno,
+                    
+                };
+                return userLoginResponse;
+            }
+            return null;
         }
 
         public async Task<UserRegisterResponseModel> RegisterUser(UserRegisterRequestModel requestModel)
