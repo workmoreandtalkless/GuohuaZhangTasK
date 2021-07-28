@@ -116,11 +116,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Alvin\\Antra\\GuohuaZhangTasK\\GuohuaZhang.App.TaskManagementSystem\\ApplicationCore\\ApplicationCore.csproj",
+      "projectUniqueName": "C:\\Alvin\\GuohuaZhangTasK\\GuohuaZhang.App.TaskManagementSystem\\ApplicationCore\\ApplicationCore.csproj",
       "projectName": "ApplicationCore",
-      "projectPath": "C:\\Alvin\\Antra\\GuohuaZhangTasK\\GuohuaZhang.App.TaskManagementSystem\\ApplicationCore\\ApplicationCore.csproj",
+      "projectPath": "C:\\Alvin\\GuohuaZhangTasK\\GuohuaZhang.App.TaskManagementSystem\\ApplicationCore\\ApplicationCore.csproj",
       "packagesPath": "C:\\Users\\guohu\\.nuget\\packages\\",
-      "outputPath": "C:\\Alvin\\Antra\\GuohuaZhangTasK\\GuohuaZhang.App.TaskManagementSystem\\ApplicationCore\\obj\\",
+      "outputPath": "C:\\Alvin\\GuohuaZhangTasK\\GuohuaZhang.App.TaskManagementSystem\\ApplicationCore\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\guohu\\AppData\\Roaming\\NuGet\\NuGet.Config",

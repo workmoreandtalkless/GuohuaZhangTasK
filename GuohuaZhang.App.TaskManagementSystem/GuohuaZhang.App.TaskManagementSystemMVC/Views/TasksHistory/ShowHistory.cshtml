@@ -1,0 +1,18 @@
+﻿@model List<ApplicationCore.Models.TasksHistoryCardResponseModel>
+
+@{ 
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="rounded" style="width : 90%">
+    <div class="container-fluid bg-light">
+        <div class="row">
+            @foreach (var movie in Model)
+            {
+                <div class="col-2">
+                    <partial name="_TasksHistoryCard" model="movie" />
+                </div>
+            }
+        </div>
+    </div>
+</div>

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pqZcD8aROFekCiReoqfy1QEKtfaYkGSg/oKevVlQZ448Ihq8sdGgMh3oDI3mYew1ku23ZQ488wbE+jsloKUnSw==",
+  "dgSpecHash": "N4ps/t2um7f7cX8qTvzKHqHTlStnvC3UNfHeNN/NvnAp222ao6ixH57WbOgzoi8SSwX/K6r58Gwh+tGWbOrTTg==",
   "success": true,
-  "projectFilePath": "C:\\Alvin\\Antra\\GuohuaZhangTasK\\GuohuaZhang.App.TaskManagementSystem\\ApplicationCore\\ApplicationCore.csproj",
+  "projectFilePath": "C:\\Alvin\\GuohuaZhangTasK\\GuohuaZhang.App.TaskManagementSystem\\ApplicationCore\\ApplicationCore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\guohu\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
   ],

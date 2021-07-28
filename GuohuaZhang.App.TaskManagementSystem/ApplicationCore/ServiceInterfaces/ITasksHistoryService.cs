@@ -14,5 +14,6 @@ namespace ApplicationCore.ServiceInterfaces
         Task<TaskHistoryResponseModel> AddTaskHistory(TaskHistoryRequestModel model);
         Task<TaskHistoryResponseModel> GetTasksHistoryById(int id);
         Task DeleteTask(int id);
+        Task<int> GetCount();
     }
 }

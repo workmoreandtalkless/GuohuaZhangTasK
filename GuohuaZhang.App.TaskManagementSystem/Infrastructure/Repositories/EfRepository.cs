@@ -39,7 +39,9 @@ namespace Infrastructure.Repositories
 
         public async Task<int> GetCountAsync(Expression<Func<T, bool>> filter = null)
         {
-            throw new NotImplementedException();
+            if (filter != null)
+                return await _dbContext.Set<T>().Where(filter).CountAsync();
+            return await _dbContext.Set<T>().CountAsync();
         }
 
         public async Task<bool> GetExistsAsync(Expression<Func<T, bool>> filter = null)

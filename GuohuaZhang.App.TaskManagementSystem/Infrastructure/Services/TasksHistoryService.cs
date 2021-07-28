@@ -14,9 +14,11 @@ namespace Infrastructure.Services
     public class TasksHistoryService : ITasksHistoryService
     {
         private readonly ITasksHistoryRepository _tasksHistoryRepository;
-        public TasksHistoryService(ITasksHistoryRepository tasksHistoryRepository)
+        private readonly ICurrentUser _currentUser;
+        public TasksHistoryService(ITasksHistoryRepository tasksHistoryRepository,ICurrentUser currentUser)
         {
             _tasksHistoryRepository = tasksHistoryRepository;
+            _currentUser = currentUser;
         }
 
         public async Task<TaskHistoryResponseModel> AddTaskHistory(TaskHistoryRequestModel model)
@@ -55,6 +57,12 @@ namespace Infrastructure.Services
             
             var taskHistory = await _tasksHistoryRepository.ListAsync(t => t.TaskId == id);
             await _tasksHistoryRepository.DeleteAsync(taskHistory.First());
+        }
+
+        public async Task<int> GetCount()
+        {
+            var count = await _tasksHistoryRepository.GetCountAsync();
+            return count;
         }
 
         public async Task<List<TasksHistoryCardResponseModel>> GetRecentTask()

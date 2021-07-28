@@ -6083,11 +6083,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Alvin\\Antra\\GuohuaZhangTasK\\GuohuaZhang.App.TaskManagementSystem\\TaskManagementSystemAPI\\TaskManagementSystemAPI.csproj",
+      "projectUniqueName": "C:\\Alvin\\GuohuaZhangTasK\\GuohuaZhang.App.TaskManagementSystem\\TaskManagementSystemAPI\\TaskManagementSystemAPI.csproj",
       "projectName": "TaskManagementSystemAPI",
-      "projectPath": "C:\\Alvin\\Antra\\GuohuaZhangTasK\\GuohuaZhang.App.TaskManagementSystem\\TaskManagementSystemAPI\\TaskManagementSystemAPI.csproj",
+      "projectPath": "C:\\Alvin\\GuohuaZhangTasK\\GuohuaZhang.App.TaskManagementSystem\\TaskManagementSystemAPI\\TaskManagementSystemAPI.csproj",
       "packagesPath": "C:\\Users\\guohu\\.nuget\\packages\\",
-      "outputPath": "C:\\Alvin\\Antra\\GuohuaZhangTasK\\GuohuaZhang.App.TaskManagementSystem\\TaskManagementSystemAPI\\obj\\",
+      "outputPath": "C:\\Alvin\\GuohuaZhangTasK\\GuohuaZhang.App.TaskManagementSystem\\TaskManagementSystemAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\guohu\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6104,11 +6104,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Alvin\\Antra\\GuohuaZhangTasK\\GuohuaZhang.App.TaskManagementSystem\\ApplicationCore\\ApplicationCore.csproj": {
-              "projectPath": "C:\\Alvin\\Antra\\GuohuaZhangTasK\\GuohuaZhang.App.TaskManagementSystem\\ApplicationCore\\ApplicationCore.csproj"
+            "C:\\Alvin\\GuohuaZhangTasK\\GuohuaZhang.App.TaskManagementSystem\\ApplicationCore\\ApplicationCore.csproj": {
+              "projectPath": "C:\\Alvin\\GuohuaZhangTasK\\GuohuaZhang.App.TaskManagementSystem\\ApplicationCore\\ApplicationCore.csproj"
             },
-            "C:\\Alvin\\Antra\\GuohuaZhangTasK\\GuohuaZhang.App.TaskManagementSystem\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "C:\\Alvin\\Antra\\GuohuaZhangTasK\\GuohuaZhang.App.TaskManagementSystem\\Infrastructure\\Infrastructure.csproj"
+            "C:\\Alvin\\GuohuaZhangTasK\\GuohuaZhang.App.TaskManagementSystem\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Alvin\\GuohuaZhangTasK\\GuohuaZhang.App.TaskManagementSystem\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }

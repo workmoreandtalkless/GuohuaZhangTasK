@@ -10,3 +10,15 @@ C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\ApplicationC
 C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\ApplicationCore\obj\Debug\net5.0\ApplicationCore.dll
 C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\ApplicationCore\obj\Debug\net5.0\ref\ApplicationCore.dll
 C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\ApplicationCore\obj\Debug\net5.0\ApplicationCore.pdb
+C:\Alvin\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\ApplicationCore\bin\Debug\net5.0\ApplicationCore.deps.json
+C:\Alvin\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\ApplicationCore\bin\Debug\net5.0\ApplicationCore.dll
+C:\Alvin\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\ApplicationCore\bin\Debug\net5.0\ref\ApplicationCore.dll
+C:\Alvin\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\ApplicationCore\bin\Debug\net5.0\ApplicationCore.pdb
+C:\Alvin\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\ApplicationCore\obj\Debug\net5.0\ApplicationCore.csproj.AssemblyReference.cache
+C:\Alvin\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\ApplicationCore\obj\Debug\net5.0\ApplicationCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Alvin\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\ApplicationCore\obj\Debug\net5.0\ApplicationCore.AssemblyInfoInputs.cache
+C:\Alvin\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\ApplicationCore\obj\Debug\net5.0\ApplicationCore.AssemblyInfo.cs
+C:\Alvin\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\ApplicationCore\obj\Debug\net5.0\ApplicationCore.csproj.CoreCompileInputs.cache
+C:\Alvin\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\ApplicationCore\obj\Debug\net5.0\ApplicationCore.dll
+C:\Alvin\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\ApplicationCore\obj\Debug\net5.0\ref\ApplicationCore.dll
+C:\Alvin\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\ApplicationCore\obj\Debug\net5.0\ApplicationCore.pdb
