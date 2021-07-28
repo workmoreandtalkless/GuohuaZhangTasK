@@ -51,6 +51,22 @@ namespace Infrastructure.Services
             await _tasksService.DeleteTask(tasksResponse.Id, tasksResponse.userid);
         }
 
+        public async Task<UserRegisterRequestModel> EidtProfile(int id)
+        {
+            var user = await _usersRepository.GetByIdAsync(id);
+            var userModel = new UserRegisterRequestModel
+            {
+                Password = user.HashedPassword,
+                Email = user.Email,
+                Fullname = user.Fullname,
+                Mobileno = user.Mobileno
+            };
+            UpdateUser(userModel);
+
+            return userModel;
+            
+        }
+
         public async Task<UserRegisterResponseModel> GetUser(string email)
         {
            var user = await _usersRepository.GetUserByEmail(email);

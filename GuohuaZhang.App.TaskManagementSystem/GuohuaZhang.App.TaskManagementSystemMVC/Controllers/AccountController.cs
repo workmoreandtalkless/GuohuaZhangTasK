@@ -14,9 +14,11 @@ namespace GuohuaZhang.App.TaskManagementSystemMVC.Controllers
     public class AccountController : Controller
     {
         private readonly IUsersService _usersService;
-        public AccountController(IUsersService usersService)
+        private readonly ITasksService _tasksService;
+        public AccountController(IUsersService usersService , ITasksService tasksService)
         {
             _usersService = usersService;
+            _tasksService = tasksService;
         }
         //method for register
         [HttpGet]
@@ -93,5 +95,18 @@ namespace GuohuaZhang.App.TaskManagementSystemMVC.Controllers
             return RedirectToAction("Login");
         }
 
+        public async Task<IActionResult> Profile(int id)
+        {
+           /* var user = await _tasksService.GetTasksByUserId(id);*/
+            var user = await _usersService.GetUserById(id);
+            return View(user);
+        }
+        public async Task<IActionResult> EditProfile(int id)
+        {
+            var user = await _usersService.EidtProfile(id);
+
+            return View(user);
+
+        }
     }
 }

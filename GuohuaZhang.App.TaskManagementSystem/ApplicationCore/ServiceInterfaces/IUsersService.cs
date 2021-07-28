@@ -18,6 +18,7 @@ namespace ApplicationCore.ServiceInterfaces
         Task UpdateUser(UserRegisterRequestModel model);
 
         Task ConfirmFinished(TasksResponseModel tasksResponse);
-        
+        Task<UserRegisterRequestModel> EidtProfile(int id);
+
     }
 }

@@ -1,0 +1,23 @@
+﻿@model ApplicationCore.Models.UserRegisterResponseModel
+
+@using ApplicationCore.ServiceInterfaces
+@inject ICurrentUser _currentUser
+@inject ITasksService _tasksService
+@{
+    ViewData["Title"] = "User Profile";
+}
+
+<div class="container">
+    <h3>My Profile</h3>
+    <div class="row bg-light">
+        <div class="col-3 justify-content-center bg-light">
+            <div class="card mt-10">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><i class="fas fa-id-card"></i>FullName: &nbsp;@Model.Fullname</li>
+                    <li class="list-group-item"><i class="fas fa-envelope"></i>Email: &nbsp;@Model.Email</li>
+                    <li class="list-group-item"><i class="fas fa-sign-in-alt"></i>Mobile Number: &nbsp;@Model.Mobileno</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
