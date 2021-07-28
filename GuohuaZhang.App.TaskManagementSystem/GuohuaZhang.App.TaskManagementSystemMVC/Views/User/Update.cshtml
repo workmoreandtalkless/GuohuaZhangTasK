@@ -1,4 +1,5 @@
-﻿@model ApplicationCore.Models.TaskRequestModel
+﻿@model ApplicationCore.Models.TasksResponseModel
+
 @using ApplicationCore.ServiceInterfaces
 @inject ICurrentUser _currentUser
 @{
@@ -15,37 +16,43 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
             <div class="form-group">
+                <label asp-for="Id" class="control-label">Id</label>
+                <input asp-for="Id" class="form-control" value="@Model.Id" name="Id" readonly>
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
                 <label asp-for="userid" class="control-label">UserId</label>
                 <input asp-for="userid" class="form-control" value="@_currentUser.UserId" name="userid" readonly>
                 <span asp-validation-for="userid" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Title" class="control-label">Title</label>
-                <input asp-for="Title" class="form-control" value="" name="Title">
+                <input asp-for="Title" class="form-control" value="@Model.Title" name="Title">
                 <span asp-validation-for="Title" class="text-danger"></span>
             </div>
 
             <div class="form-group">
                 <label asp-for="Description" class="control-label">Description</label>
-                <input asp-for="Description" class="form-control" value="" name="Description">
+                <input asp-for="Description" class="form-control" value="@Model.Description" name="Description">
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
 
             <div class="form-group">
                 <label asp-for="DueDate" class="control-label">DueDate</label>
-                <input asp-for="DueDate" class="form-control" value="" name="DueDate">
+                <input asp-for="DueDate" class="form-control" value="@Model.DueDate" name="DueDate">
                 <span asp-validation-for="DueDate" class="text-danger"></span>
             </div>
 
             <div class="form-group">
                 <label asp-for="Priority" class="control-label">Priority</label>
-                <input asp-for="Priority" class="form-control" value="" name="Priority">
+                <input asp-for="Priority" class="form-control" value="@Model.Priority" name="Priority">
                 <span asp-validation-for="Priority" class="text-danger"></span>
             </div>
 
             <div class="form-group">
                 <label asp-for="Remarks" class="control-label">Remarks</label>
-                <input asp-for="Remarks" class="form-control" value="" name="Remarks">
+                <input asp-for="Remarks" class="form-control" value="@Model.Remarks" name="Remarks">
                 <span asp-validation-for="Remarks" class="text-danger"></span>
             </div>
 

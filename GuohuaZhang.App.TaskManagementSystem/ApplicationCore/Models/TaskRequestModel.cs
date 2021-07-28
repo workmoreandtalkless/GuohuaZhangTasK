@@ -8,7 +8,7 @@ namespace ApplicationCore.Models
 {
    public class TaskRequestModel
     {
-        /*public int Id { get; set; }*/
+        public int Id { get; set; }
         public int userid { get; set; }
 
         public string Title { get; set; }

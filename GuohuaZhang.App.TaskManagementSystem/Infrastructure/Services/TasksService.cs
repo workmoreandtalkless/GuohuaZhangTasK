@@ -33,6 +33,7 @@ namespace Infrastructure.Services
 
             var entity = new Tasks
             {
+                Id = model.Id,
                 userid = model.userid,
                 Title = model.Title,
                 Description = model.Description,

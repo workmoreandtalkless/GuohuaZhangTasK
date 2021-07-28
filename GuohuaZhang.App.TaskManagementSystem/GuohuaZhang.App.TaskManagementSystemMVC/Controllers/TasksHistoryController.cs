@@ -31,7 +31,9 @@ namespace GuohuaZhang.App.TaskManagementSystemMVC.Controllers
         public async Task<IActionResult> Delete(int id)
         {
             await _tasksHistoryService.DeleteTask(id);
-            return View("ShowHistory");
+        
+            
+            return RedirectToAction("ShowHistory");
         }
     }
 }

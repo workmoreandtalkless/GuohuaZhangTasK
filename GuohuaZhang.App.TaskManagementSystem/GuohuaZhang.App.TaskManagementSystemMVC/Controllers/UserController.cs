@@ -33,7 +33,7 @@ namespace GuohuaZhang.App.TaskManagementSystemMVC.Controllers
                 return LocalRedirect("~/Account/Login");
             }
             await _usersService.ConfirmFinished(taskResponse);
-            return View("Home/Index");
+            return RedirectToAction("Index", "Home");
             
         }
 
@@ -44,7 +44,7 @@ namespace GuohuaZhang.App.TaskManagementSystemMVC.Controllers
                 return LocalRedirect("~/Account/Login");
             }
             await _tasksService.DeleteTask(id);
-            return View("Home/Index");
+            return RedirectToAction("Index", "Home");
         }
 
         public async Task<IActionResult> Update(int id)
@@ -53,8 +53,9 @@ namespace GuohuaZhang.App.TaskManagementSystemMVC.Controllers
             {
                 return LocalRedirect("~/Account/Login");
             }
-           /* await _tasksService.UpdatedById(id);*/
-            return View();
+            var taskResponse = await _tasksService.GetTasksById(id);
+            return View(taskResponse);
+         
         }
 
         public async Task<IActionResult> UpdateTask(TasksResponseModel tasksResponseModel)
