@@ -38,7 +38,7 @@ namespace GuohuaZhang.App.TaskManagementSystemMVC.Controllers
             }
             var taskResponse = _tasksService.AddTask(taskRequestModel);
 
-            return RedirectToAction("~/");
+            return RedirectToAction("Home/Index");
         }
     }
 }

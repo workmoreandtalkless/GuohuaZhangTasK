@@ -175,3 +175,4 @@ C:\Alvin\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\GuohuaZhang.App.Ta
 C:\Alvin\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\GuohuaZhang.App.TaskManagementSystemMVC\obj\Debug\net5.0\GuohuaZhang.App.TaskManagementSystemMVC.pdb
 C:\Alvin\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\GuohuaZhang.App.TaskManagementSystemMVC\obj\Debug\net5.0\GuohuaZhang.App.TaskManagementSystemMVC.genruntimeconfig.cache
 C:\Alvin\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\GuohuaZhang.App.TaskManagementSystemMVC\obj\Debug\net5.0\Razor\Views\TasksHistory\ShowHistory.cshtml.g.cs
+C:\Alvin\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\GuohuaZhang.App.TaskManagementSystemMVC\obj\Debug\net5.0\Razor\Views\TasksHistory\Details.cshtml.g.cs

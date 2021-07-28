@@ -20,7 +20,7 @@ namespace Infrastructure.Repositories
         }
         public virtual async Task<T> AddAsync(T entity)
         {
-           await _dbContext.Set<T>().AddAsync(entity);
+            _dbContext.Set<T>().AddAsync(entity);
             await _dbContext.SaveChangesAsync();
             return entity;
         }
@@ -56,7 +56,7 @@ namespace Infrastructure.Repositories
 
         public async Task<IEnumerable<T>> ListAsync(Expression<Func<T, bool>> filter)
         {
-            throw new NotImplementedException();
+            return await _dbContext.Set<T>().Where(filter).ToListAsync();
         }
 
         public async Task<T> UpdateAsync(T entity)

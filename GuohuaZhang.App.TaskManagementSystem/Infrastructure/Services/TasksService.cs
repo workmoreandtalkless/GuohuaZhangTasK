@@ -64,6 +64,17 @@ namespace Infrastructure.Services
             await _tasksRepository.DeleteAsync(task.First());
         }
 
+        public async Task DeleteTask(int id)
+        {
+            var taskHistory = await _tasksRepository.ListAsync(t => t.Id == id);
+            await _tasksRepository.DeleteAsync(taskHistory.First());
+        }
+
+        /*  public Task DeleteTask()
+          {
+
+          }*/
+
         public async Task<List<TasksResponseModel>> GetTasks()
         {
             var tasks = await _tasksRepository.GetTasks();

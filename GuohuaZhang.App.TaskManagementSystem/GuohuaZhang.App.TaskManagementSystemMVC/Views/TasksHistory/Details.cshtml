@@ -1,9 +1,9 @@
-﻿@model ApplicationCore.Models.TasksResponseModel
+﻿@model ApplicationCore.Models.TaskHistoryResponseModel
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Task Detail</title>
+    <title>@ViewData["Title"] - TaskHistory Detail</title>
 
     <script src="https://kit.fontawesome.com/2cb297ca9f.js" crossorigin="anonymous"></script>
 
@@ -11,20 +11,20 @@
 </head>
 
 <div class="container">
-    <h1>Task In Process You only can remove Task assigned to you<h1>
+    <h1>Task History You only can delete Task assigned to You</h1>
     <table class="table table-hover">
         <tr>
             <td>Title</td>
             <td>Description</td>
             <td>DueDate</td>
-            <td>Priority</td>
+            <td>Completed</td>
             <td>Remarks</td>
         </tr>
         <tr>
             <td>@Model.Title</td>
             <td>@Model.Description</td>
             <td>@Model.DueDate</td>
-            <td>@Model.Priority</td>
+            <td>@Model.Completed</td>
             <td>@Model.Remarks</td>
         </tr>
     </table>
@@ -32,23 +32,18 @@
 
 @if (User.Identity.IsAuthenticated)
 {
-    <a type="button" class="btn btn-primary btn-lg btn-block"
-       asp-action="Finish" asp-controller="User" asp-route-id="@Model.Id">
-        <span>Done</span>
-    </a>
+
     <a type="button" class="btn btn-danger btn-lg btn-block"
-       asp-action="Delete" asp-controller="User" asp-route-id="@Model.Id">
+       asp-action="Delete" asp-controller="TasksHistory" asp-route-id="@Model.TaskId">
         <span>Delete</span>
     </a>
 }
 else
 {
-    <a type="button" class="btn btn-primary btn-lg btn-block"
-       asp-action="Finish" asp-controller="User" asp-route-mid="@Model.Id">Done</a>
-
     <a type="button" class="btn btn-danger btn-lg btn-block"
-       asp-action="Delete" asp-controller="User" asp-route-id="@Model.Id">
+       asp-action="Delete" asp-controller="TasksHistory" asp-route-id="@Model.TaskId">
         <span>Delete</span>
     </a>
 }
+
 

@@ -21,5 +21,17 @@ namespace GuohuaZhang.App.TaskManagementSystemMVC.Controllers
             var taskHistory = await _tasksHistoryService.GetRecentTask();
             return View(taskHistory);
         }
+
+        public async Task<IActionResult> Details(int id)
+        {
+            var task = await _tasksHistoryService.GetTasksHistoryById(id);
+            return View(task);
+        }
+
+        public async Task<IActionResult> Delete(int id)
+        {
+            await _tasksHistoryService.DeleteTask(id);
+            return View("ShowHistory");
+        }
     }
 }

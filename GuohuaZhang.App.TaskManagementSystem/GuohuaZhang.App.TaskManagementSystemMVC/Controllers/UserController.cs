@@ -33,8 +33,14 @@ namespace GuohuaZhang.App.TaskManagementSystemMVC.Controllers
                 return LocalRedirect("~/Account/Login");
             }
             await _usersService.ConfirmFinished(taskResponse);
-            return Ok();
+            return View("Home/Index");
             
+        }
+
+        public async Task<IActionResult> Delete(int id)
+        {
+            await _tasksService.DeleteTask(id);
+            return View("Home/Index");
         }
     }
 }
