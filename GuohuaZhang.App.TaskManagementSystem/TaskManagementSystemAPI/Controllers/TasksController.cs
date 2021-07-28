@@ -59,6 +59,14 @@ namespace TaskManagementSystemAPI.Controllers
             if (task == null) return NotFound("don't have this id");
             return Ok(task);
         }
+
+        [HttpDelete]
+        [Route("{Id:int}")]
+        public async Task<IActionResult> DeleteTask(int id,int uid)
+        {
+            await _tasksService.DeleteTask(id,uid);
+            return NoContent();
+        }
 /*        [HttpGet]
         [Route("{id:int}/Tasks",Name ="GetTasksByUserId")]
         public async Task<IActionResult> GetTasksByUserId(int uid)

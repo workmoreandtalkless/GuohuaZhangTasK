@@ -19,6 +19,6 @@ namespace ApplicationCore.Entities
         public string Salt { get; set; }
 
         public ICollection<Tasks> Tasks { get; set; }
-        public ICollection<TasksHistory> TasksHistories { get; set; }
+        public ICollection<TaskHistory> TasksHistories { get; set; }
     }
 }

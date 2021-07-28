@@ -15,5 +15,7 @@ namespace ApplicationCore.ServiceInterfaces
         Task<UserRegisterResponseModel> GetUserById(int id);
         Task<UserRegisterResponseModel> GetUser(string email);
         Task<List<UserRegisterResponseModel>> GetUser();
+        Task UpdateUser(UserRegisterRequestModel model);
+        
     }
 }

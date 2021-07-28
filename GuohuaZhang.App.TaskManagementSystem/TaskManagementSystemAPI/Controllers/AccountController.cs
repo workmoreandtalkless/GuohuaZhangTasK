@@ -57,7 +57,13 @@ namespace TaskManagementSystemAPI.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> UpdateUser([FromBody] )
+        public async Task<IActionResult> UpdateUser([FromBody] UserRegisterRequestModel model)
+        {
+            await _usersService.UpdateUser(model);
+            return Ok();
+        }
+
+
 
     }
 }

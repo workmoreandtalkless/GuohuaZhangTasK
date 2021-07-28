@@ -64,3 +64,5 @@ C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\TaskManageme
 C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\TaskManagementSystemAPI\obj\Debug\net5.0\ref\TaskManagementSystemAPI.dll
 C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\TaskManagementSystemAPI\obj\Debug\net5.0\TaskManagementSystemAPI.pdb
 C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\TaskManagementSystemAPI\obj\Debug\net5.0\TaskManagementSystemAPI.genruntimeconfig.cache
+C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\TaskManagementSystemAPI\bin\Debug\net5.0\Humanizer.dll
+C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\TaskManagementSystemAPI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll

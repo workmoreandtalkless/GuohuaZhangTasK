@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Cryptography;
 using System.Security.Cryptography;
 using Microsoft.AspNetCore.Cryptography.KeyDerivation;
+using System.Net;
 /*using AutoMapper;*/
 
 namespace Infrastructure.Services
@@ -18,10 +19,12 @@ namespace Infrastructure.Services
     public class UsersService : IUsersService
     {
         private readonly IUsersRepository _usersRepository;
-       
-        public UsersService(IUsersRepository usersRepository)
+        private readonly ICurrentUser _currentUser;
+
+        public UsersService(IUsersRepository usersRepository, ICurrentUser currentUser)
         {
             _usersRepository = usersRepository;
+            _currentUser = currentUser;
         }
 
         public async Task<UserRegisterResponseModel> GetUser(string email)
@@ -131,6 +134,28 @@ namespace Infrastructure.Services
 
 
         }
+
+        public async Task UpdateUser(UserRegisterRequestModel model)
+        {
+            var user = await _usersRepository.GetUserByEmail(model.Email);
+            if (_currentUser.UserId != user.Id)
+                throw new HttpException(HttpStatusCode.Unauthorized, "You are not Authorized to Review");
+            var newsalt = CreateSalt();
+            var hashpassword = HashPassword(model.Email, newsalt);
+
+            var newUser = new Users
+            {
+                Id = user.Id,
+                Email = user.Email,
+                HashedPassword = hashpassword,
+                Salt = newsalt,
+                Fullname = model.Fullname,
+                Mobileno = model.Mobileno
+
+            };
+            await _usersRepository.UpdateAsync(newUser);
+    }
+
         //never write security by you own
         private string CreateSalt()
         {

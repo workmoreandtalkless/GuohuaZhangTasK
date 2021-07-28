@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace ApplicationCore.RepositoryInterfaces
 {
-    public interface ITasksHistoryRepository : IAsyncRepository<TasksHistory>
+    public interface ITasksHistoryRepository : IAsyncRepository<TaskHistory>
     {
-        public Task<List<TasksHistory>> GetRecent30Task();
+        public Task<List<TaskHistory>> GetRecent30Task();
     }
 }

@@ -16,13 +16,13 @@ namespace Infrastructure.Data
         }
         public DbSet<Tasks> Tasks { get; set; }
         public DbSet<Users> Users { get; set; }
-        public DbSet<TasksHistory> TasksHistories { get; set; }
+        public DbSet<TaskHistory> TasksHistories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) //this is a virtual method from DbContext
         {
             modelBuilder.Entity<Users>(ConfigureUsers);
             modelBuilder.Entity<Tasks>(ConfigureTasks);
-            modelBuilder.Entity<TasksHistory>(ConfigureTasksHistory);
+            modelBuilder.Entity<TaskHistory>(ConfigureTasksHistory);
         }
         private void ConfigureUsers(EntityTypeBuilder<Users> builder)
         {
@@ -52,11 +52,11 @@ namespace Infrastructure.Data
             
         }
 
-        private void ConfigureTasksHistory(EntityTypeBuilder<TasksHistory> builder)
+        private void ConfigureTasksHistory(EntityTypeBuilder<TaskHistory> builder)
         {
             // specify all the fluent api rules for this model
 
-            builder.ToTable("TasksHistory");
+            builder.ToTable("TaskHistory");
             builder.HasKey(m => m.TaskId);
             builder.HasOne(m => m.Users).WithMany(m => m.TasksHistories).HasForeignKey(m => m.UserId);
             builder.Property(m => m.UserId);

@@ -10,5 +10,9 @@ namespace ApplicationCore.ServiceInterfaces
     public interface ITasksHistoryService
     {
         Task<List<TasksHistoryCardResponseModel>> GetRecentTask();
+        Task<List<TasksHistoryCardResponseModel>>GetTasksHistory();
+        Task<TaskHistoryResponseModel> AddTaskHistory(TaskHistoryRequestModel model);
+        Task<TaskHistoryResponseModel> GetTasksHistoryById(int id);
+        Task DeleteTask(int id);
     }
 }

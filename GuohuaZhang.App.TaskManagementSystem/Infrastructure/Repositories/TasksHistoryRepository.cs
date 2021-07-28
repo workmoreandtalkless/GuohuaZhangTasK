@@ -10,14 +10,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repositories
 {
-    public class TasksHistoryRepository : EfRepository<TasksHistory>, ITasksHistoryRepository
+    public class TasksHistoryRepository : EfRepository<TaskHistory>, ITasksHistoryRepository
     {
         public TasksHistoryRepository(TaskDbContext dbContext) : base(dbContext)
         {
 
         }
 
-        public async Task<List<TasksHistory>> GetRecent30Task()
+        public async Task<List<TaskHistory>> GetRecent30Task()
         {
             var recentTasks = await _dbContext.TasksHistories.OrderByDescending(m => m.Completed).Take(30).ToListAsync();
             return recentTasks;

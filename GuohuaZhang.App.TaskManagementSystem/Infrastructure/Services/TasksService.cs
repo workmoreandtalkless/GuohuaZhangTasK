@@ -6,6 +6,7 @@ using ApplicationCore.ServiceInterfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,10 +15,11 @@ namespace Infrastructure.Services
     public class TasksService : ITasksService
     {
         private readonly ITasksRepository _tasksRepository;
-
-        public TasksService(ITasksRepository tasksRepository)
+        private readonly ICurrentUser _currentUser;
+        public TasksService(ITasksRepository tasksRepository , ICurrentUser currentUser)
         {
             _tasksRepository = tasksRepository;
+            _currentUser = currentUser;
         }
 
         public async Task<TasksResponseModel> AddTask(TaskRequestModel model)
@@ -52,6 +54,14 @@ namespace Infrastructure.Services
             };
 
             return taskmodel;
+        }
+
+        public async Task DeleteTask(int id,int uid)
+        {
+            if(_currentUser.UserId!=uid)
+                throw new HttpException(HttpStatusCode.Unauthorized, "You are not Authorized to Delete Review");
+            var task = await _tasksRepository.ListAsync(t => t.userid == uid && t.Id == id);
+            await _tasksRepository.DeleteAsync(task.First());
         }
 
         public async Task<List<TasksResponseModel>> GetTasks()
