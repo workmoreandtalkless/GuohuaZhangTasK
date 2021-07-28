@@ -1,4 +1,5 @@
 ﻿using ApplicationCore.Entities;
+using ApplicationCore.Exceptions;
 using ApplicationCore.Models;
 using ApplicationCore.RepositoryInterfaces;
 using ApplicationCore.ServiceInterfaces;
@@ -20,6 +21,11 @@ namespace Infrastructure.Services
 
         public async Task<TaskHistoryResponseModel> AddTaskHistory(TaskHistoryRequestModel model)
         {
+            var task = await _tasksHistoryRepository.GetByIdAsync(model.TaskId);
+            if (task != null)
+            {
+                new ConflictException("Task already in TaskHistory");
+            }
             var entity = new TaskHistory
             {
                 TaskId = model.TaskId,

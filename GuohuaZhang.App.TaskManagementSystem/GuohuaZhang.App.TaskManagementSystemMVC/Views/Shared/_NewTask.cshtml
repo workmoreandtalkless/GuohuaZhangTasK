@@ -1,0 +1,12 @@
+﻿@using ApplicationCore.ServiceInterfaces
+@inject ITasksService _tasksService
+@inject ICurrentUser _currentService
+
+ 
+<button class="btn btn-outline-primary my-2 my-sm-0" type="submit">
+
+        <a  asp-controller="Tasks" asp-action="NewTask" asp-route-id="@_currentService.UserId">
+            New Task
+        </a>
+</button>
+

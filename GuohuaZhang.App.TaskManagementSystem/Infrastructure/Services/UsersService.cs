@@ -20,11 +20,35 @@ namespace Infrastructure.Services
     {
         private readonly IUsersRepository _usersRepository;
         private readonly ICurrentUser _currentUser;
+        private readonly ITasksHistoryService _tasksHistoryService;
+        private readonly ITasksService _tasksService;
 
-        public UsersService(IUsersRepository usersRepository, ICurrentUser currentUser)
+        public UsersService(IUsersRepository usersRepository, ICurrentUser currentUser,
+            ITasksHistoryService tasksHistoryService,
+            ITasksService tasksService)
         {
             _usersRepository = usersRepository;
             _currentUser = currentUser;
+            _tasksHistoryService = tasksHistoryService;
+            _tasksService = tasksService;
+        }
+
+        public async Task ConfirmFinished(TasksResponseModel tasksResponse)
+        {
+           if(_currentUser.UserId != tasksResponse.userid)
+                throw new HttpException(HttpStatusCode.Unauthorized, "You are not Authorized to finish this Task");
+
+            var taskHistory = new TaskHistoryRequestModel
+            {
+                TaskId = tasksResponse.Id,
+                UserId = tasksResponse.userid,
+                Title = tasksResponse.Title,
+                Description = tasksResponse.Description,
+                DueDate = tasksResponse.DueDate,
+                Remarks = tasksResponse.Remarks,
+            };
+            await _tasksHistoryService.AddTaskHistory(taskHistory);
+            await _tasksService.DeleteTask(tasksResponse.Id, tasksResponse.userid);
         }
 
         public async Task<UserRegisterResponseModel> GetUser(string email)

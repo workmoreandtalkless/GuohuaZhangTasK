@@ -21,16 +21,19 @@ namespace GuohuaZhang.App.TaskManagementSystemMVC.Controllers
 
         private readonly ITasksHistoryService _taskHistoryService;
         private readonly ITasksService _taskService;
-        public HomeController(ITasksHistoryService taskHistoryService)
+        public HomeController(ITasksHistoryService taskHistoryService, ITasksService taskService)
         {
             _taskHistoryService = taskHistoryService;
+            _taskService = taskService;
         }
 
         public async Task<IActionResult> Index()
         {
-            var taskshistories = await _taskHistoryService.GetRecentTask();
-            ViewBag.TasksHistoryCount = taskshistories.Count();
-            return View();
+            /*var taskshistories = await _taskHistoryService.GetRecentTask();
+            ViewBag.TasksHistoryCount = taskshistories.Count();*/
+
+            var recentTask = await _taskService.GetTasks();
+            return View(recentTask);
         }
 
         public async Task<IActionResult> Privacy()

@@ -1,0 +1,13 @@
+﻿@model ApplicationCore.Models.TasksResponseModel
+
+<div class="card mb-4 shadow bg-light">
+    <a asp-controller="Tasks" asp-action="Details" asp-route-id="@Model.Id">
+
+        <h1>Task ID: @Model.userid</h1>
+        <h1>Task Title: @Model.Title</h1>
+@*        <p>@Model.Description</p>
+        <p>@Model.DueDate</p>
+        <p>@Model.Completed</p>
+        <p>@Model.Remarks</p>*@
+    </a>
+</div>

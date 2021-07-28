@@ -16,6 +16,8 @@ namespace ApplicationCore.ServiceInterfaces
         Task<UserRegisterResponseModel> GetUser(string email);
         Task<List<UserRegisterResponseModel>> GetUser();
         Task UpdateUser(UserRegisterRequestModel model);
+
+        Task ConfirmFinished(TasksResponseModel tasksResponse);
         
     }
 }

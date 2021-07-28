@@ -1,0 +1,45 @@
+﻿@model ApplicationCore.Models.TasksResponseModel
+
+@{ 
+    ViewData["title"] = "Finish";
+}
+
+<form asp-action="ConfirmFinished">
+    <div class="mb-3 col-form-label-lg">
+        <h3>Confirm Task Finish Info</h3>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Id">Id</label>
+        <input asp-for="Id" class="form-control" value="@Model.Id" name="Id" readonly>
+
+    </div>
+    <div class="mb-3">
+        <label asp-for="userid">UserId</label>
+        <input asp-for="userid" class="form-control" value="@Model.userid" name="userid" readonly>
+
+    </div>
+    <div class="mb-3">
+        <label asp-for="Title">Title</label>
+        <input asp-for="Title" class="form-control" value="@Model.Title" name="Title" readonly>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Description">Description</label>
+        <input asp-for="Description" class="form-control" value="@Model.Description" name="Description" readonly>
+    </div>
+    <div class="mb-3">
+        <label asp-for="DueDate">DueDate</label>
+        <input asp-for="DueDate" class="form-control" value="@Model.DueDate" name="DueDate" readonly>
+    </div> 
+    <div class="mb-3">
+        <label asp-for="Priority">Priority</label>
+        <input asp-for="Priority" class="form-control" value="@Model.Priority" name="Priority" readonly>
+    </div>
+    
+    <div class="mb-3">
+        <label asp-for="Remarks">Remarks</label>
+        <input asp-for="Remarks" class="form-control" value="@Model.Remarks" name="Remarks" readonly>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">ConfirmFinished</button>
+</form>

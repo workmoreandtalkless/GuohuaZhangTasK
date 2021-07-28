@@ -1,25 +1,24 @@
-﻿
-<h1> hello</h1>
-
-
-@*
-@model List<ApplicationCore.Models.TasksHistoryCardResponseModel>
+﻿@model List<ApplicationCore.Models.TasksResponseModel>
 
 @{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="rounded" style="width : 90%">
-    <div class="container-fluid bg-light">
-        <div class="row">
-            @foreach (var tasksHistoryCard in Model)
-            {
-                <div class="col-2">
-                    <partial name="_TasksHistoryCard" model="tasksHistoryCard" />
-                </div>
-            }
+
+  
+
+
+    <div class="rounded" style="width : 90%">
+        <div class="container-fluid bg-light">
+            <div class="row">
+                @foreach (var tasksCard in Model)
+                {
+                    <div class="col-6">
+                        <partial name="_TasksCard" model="tasksCard" />
+                    </div>
+                }
+            </div>
         </div>
     </div>
-</div>*@
 
 

@@ -78,5 +78,11 @@ C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\GuohuaZhang.
 C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\GuohuaZhang.App.TaskManagementSystemMVC\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\GuohuaZhang.App.TaskManagementSystemMVC\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\GuohuaZhang.App.TaskManagementSystemMVC\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs
-C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\GuohuaZhang.App.TaskManagementSystemMVC\obj\Debug\net5.0\Razor\Views\Shared\_Login.cshtml.g.cs
 C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\GuohuaZhang.App.TaskManagementSystemMVC\obj\Debug\net5.0\Razor\Views\Shared\_TasksHistoryCard.cshtml.g.cs
+C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\GuohuaZhang.App.TaskManagementSystemMVC\obj\Debug\net5.0\Razor\Views\Shared\_TasksCard.cshtml.g.cs
+C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\GuohuaZhang.App.TaskManagementSystemMVC\obj\Debug\net5.0\Razor\Views\Shared\_TaskDetailCard.cshtml.g.cs
+C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\GuohuaZhang.App.TaskManagementSystemMVC\obj\Debug\net5.0\Razor\Views\Tasks\Details.cshtml.g.cs
+C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\GuohuaZhang.App.TaskManagementSystemMVC\obj\Debug\net5.0\Razor\Views\User\Finish.cshtml.g.cs
+C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\GuohuaZhang.App.TaskManagementSystemMVC\obj\Debug\net5.0\Razor\Views\Tasks\NewTask.cshtml.g.cs
+C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\GuohuaZhang.App.TaskManagementSystemMVC\obj\Debug\net5.0\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
+C:\Alvin\Antra\GuohuaZhangTasK\GuohuaZhang.App.TaskManagementSystem\GuohuaZhang.App.TaskManagementSystemMVC\obj\Debug\net5.0\Razor\Views\Shared\_NewTask.cshtml.g.cs
