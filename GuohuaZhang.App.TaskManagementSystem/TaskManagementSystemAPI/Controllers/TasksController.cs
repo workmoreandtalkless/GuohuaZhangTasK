@@ -47,9 +47,13 @@ namespace TaskManagementSystemAPI.Controllers
 
         }
 
-    /*    [HttpPut]
+        [HttpPut]
         [Route("UpdateTask")]
-        public async Task<IActionResult> UpdateTask([FromBody])*/
+        public async Task<IActionResult> UpdateTask([FromBody] TasksResponseModel model)
+        {
+            await _tasksService.UpdateTask(model);
+            return Ok(model);
+        }
 
         [HttpGet]
         [Route("{id:int}",Name ="GetTaskById")]

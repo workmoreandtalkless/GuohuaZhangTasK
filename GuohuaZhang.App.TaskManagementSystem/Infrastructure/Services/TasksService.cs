@@ -156,6 +156,24 @@ namespace Infrastructure.Services
             return taskModel;
         }
 
+        public async Task UpdateTask(TasksResponseModel model)
+        {
+           /* if(_currentUser.UserId!= model.userid)
+            {
+                throw new HttpException(HttpStatusCode.Unauthorized, "You are not Authorized to Review");
+            }*/
 
+            var entity = new Tasks
+            {   Id = model.Id,
+                userid = model.userid,
+                Title = model.Title,
+                Description = model.Description,
+                DueDate = model.DueDate,
+                Priority = model.Priority,
+                Remarks = model.Remarks
+            };
+
+            await _tasksRepository.UpdateAsync(entity);
+        }
     }
 }

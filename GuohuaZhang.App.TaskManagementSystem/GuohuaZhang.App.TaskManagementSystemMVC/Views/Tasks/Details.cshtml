@@ -11,23 +11,24 @@
 </head>
 
 <div class="container">
-    <h1>Task In Process You only can remove Task assigned to you<h1>
-    <table class="table table-hover">
-        <tr>
-            <td>Title</td>
-            <td>Description</td>
-            <td>DueDate</td>
-            <td>Priority</td>
-            <td>Remarks</td>
-        </tr>
-        <tr>
-            <td>@Model.Title</td>
-            <td>@Model.Description</td>
-            <td>@Model.DueDate</td>
-            <td>@Model.Priority</td>
-            <td>@Model.Remarks</td>
-        </tr>
-    </table>
+    <h1>
+        Task In Process You only can remove Task assigned to you<h1>
+            <table class="table table-hover">
+                <tr>
+                    <td>Title</td>
+                    <td>Description</td>
+                    <td>DueDate</td>
+                    <td>Priority</td>
+                    <td>Remarks</td>
+                </tr>
+                <tr>
+                    <td>@Model.Title</td>
+                    <td>@Model.Description</td>
+                    <td>@Model.DueDate</td>
+                    <td>@Model.Priority</td>
+                    <td>@Model.Remarks</td>
+                </tr>
+            </table>
 </div>
 
 @if (User.Identity.IsAuthenticated)
@@ -40,6 +41,10 @@
        asp-action="Delete" asp-controller="User" asp-route-id="@Model.Id">
         <span>Delete</span>
     </a>
+    <a type="button" class="btn btn-success btn-lg btn-block"
+       asp-action="Update" asp-controller="User" asp-route-id="@Model.Id">
+        <span>Update</span>
+    </a>
 }
 else
 {
@@ -49,6 +54,10 @@ else
     <a type="button" class="btn btn-danger btn-lg btn-block"
        asp-action="Delete" asp-controller="User" asp-route-id="@Model.Id">
         <span>Delete</span>
+    </a>
+    <a type="button" class="btn btn-success btn-lg btn-block"
+       asp-action="Update" asp-controller="User" asp-route-id="@Model.Id">
+        <span>Update</span>
     </a>
 }
 

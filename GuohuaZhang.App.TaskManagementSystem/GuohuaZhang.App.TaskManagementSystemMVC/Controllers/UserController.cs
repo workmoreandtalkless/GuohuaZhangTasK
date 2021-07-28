@@ -39,8 +39,34 @@ namespace GuohuaZhang.App.TaskManagementSystemMVC.Controllers
 
         public async Task<IActionResult> Delete(int id)
         {
+            if (!_currentUser.IsAuthenticated)
+            {
+                return LocalRedirect("~/Account/Login");
+            }
             await _tasksService.DeleteTask(id);
             return View("Home/Index");
+        }
+
+        public async Task<IActionResult> Update(int id)
+        {
+            if (!_currentUser.IsAuthenticated)
+            {
+                return LocalRedirect("~/Account/Login");
+            }
+           /* await _tasksService.UpdatedById(id);*/
+            return View();
+        }
+
+        public async Task<IActionResult> UpdateTask(TasksResponseModel tasksResponseModel)
+        {
+            if (!_currentUser.IsAuthenticated)
+            {
+                return LocalRedirect("~/Account/Login");
+            }
+            await _tasksService.UpdateTask(tasksResponseModel);
+
+            return RedirectToAction("Index", "Home");
+
         }
     }
 }

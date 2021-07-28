@@ -16,5 +16,6 @@ namespace ApplicationCore.ServiceInterfaces
         Task<TasksResponseModel> GetTasksById(int id);
         Task DeleteTask(int id,int uid);
         Task DeleteTask(int id);
+        Task UpdateTask(TasksResponseModel model);
     }
 }
